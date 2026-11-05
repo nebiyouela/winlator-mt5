@@ -14,7 +14,11 @@ background**, and save. To continue with the screen locked, also enable the
 wakelock option. The new option defaults to off. Android can still terminate the
 app under memory pressure, and continuous MT5 bot operation needs device testing.
 
-Build a debug APK with Java 17, Android SDK 35, NDK 24.0.8215888, CMake 3.22.1,
+The **Build Android APK** workflow builds a debug APK on pushes to `main` or when
+started manually from **Actions**. Download the `winlator-mt5-debug` artifact
+from a successful run and extract the APK.
+
+For a local build, use Java 17, Android SDK 35, NDK 24.0.8215888, CMake 3.22.1,
 and `bash ./gradlew assembleDebug`. This build uses Winlator's package ID and a debug signing key. Installing it over the official APK requires
 a matching signing key or uninstalling that APK first, which removes its app data.
 
